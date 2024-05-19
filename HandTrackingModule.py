@@ -47,7 +47,7 @@ class handDetector():
         self.currentTime = time.time()
         self.fps = 1 / (self.currentTime - self.previousTime)
         self.previousTime = self.currentTime
-        cv.putText(frame, str(int(self.fps)), (15, 50), cv.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), 2)
+        cv.putText(frame, f"FPS: {str(int(self.fps))}", (10, 40), cv.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
         return frame
 
 
